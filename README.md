@@ -9,24 +9,24 @@ O objetivo deste [desafio](https://www.kaggle.com/) era classificar uma receita 
 Nesta competição, para quase todos os experimentos utilizei notebooks, pois assim existe a possibilidade de mesclar código com markdown, tornando a implementação dos experimentos mais clara e organizada.
 
 ##### /code
-* `base.py`: imports e algumas funções gerais
-* `hyperopt_search_spaces.py`: definição de espaços de busca para otimização de hiperparâmetros
+* `base.py`: imports e algumas funções gerais.
+* `hyperopt_search_spaces.py`: definição de espaços de busca para otimização de hiperparâmetros.
 
 ##### /notebooks
 
 * `json-processing`: processamento do dataset original, criação de dicionário de termos (ingredientes).
 * `feature-extraction`: extração de variáveis utilizando 3 métodos diferentes baseados em tf-idf.
 * `feature-engineering`: aplicando algumas técnicas de processamento nas variáveis, como stemming.
-* `model-selection`: otimização de hiperparâmetros e validação cruzada, experimentos com diversos algoritmos, histórico de submissões
+* `model-selection`: otimização de hiperparâmetros e validação cruzada, experimentos com diversos algoritmos, histórico de submissões.
    
 ### Descrição
 
-Esta competição se enquadra na categoria de "ensino" mas já é mais sofisticada que a competição do [Titanic](), por exemplo.
+Esta competição se enquadra na categoria de "ensino" mas já é mais sofisticada que a competição do [Titanic](https://www.kaggle.com/c/titanic), por exemplo.
 Existem diversas maneiras de se representar a informação neste caso. Podem ser usadas variáveis binárias para indicar a presença de dados ingredientes ou utilizar algum método para atribuir pesos às variáveis (como tf-idf). Também, o problema pode ser visto como um caso de text mining, onde é interessante utilizar técnicas como stemming, combinações de n-grams, entre outros (nos notebooks há diversos scripts para criar dados utilizando diferentes combinações destas técnicas). 
 
-Em razão de restrições de tempo, os modelos criados foram simples. Não utilizei grandes ensembles e treinei somente um modelo para todas as classes ([esta solução](), por exemplo, cria um modelo para cada uma das classes, além de utilizar diferentes tipos de processamento de dados).
+Em razão de restrições de tempo, os modelos criados foram simples. Não utilizei grandes ensembles e treinei somente um modelo para todas as classes ([esta solução](https://github.com/dmcgarry/kaggle_cooking), por exemplo, cria um modelo para cada uma das classes, além de utilizar diferentes tipos de processamento de dados).
 
-Meu principal objetivo foi me familiarizar com o pacote [XGBoost](), um algoritmo bastante robusto e eficiente que vem mostrando resultados expressivos em competições de ciência de dados. De fato, foi com este algoritmo que obtive o melhor resultado. Para validar os modelos e otimizar hiperparâmetros foi utilizada uma busca aleatória ([hyperopt]()) com uma validação cruzada estratificada com 5 folds.
+Meu principal objetivo foi me familiarizar com o pacote [XGBoost](https://github.com/dmlc/xgboost), um algoritmo bastante robusto e eficiente que vem mostrando resultados expressivos em competições de ciência de dados. De fato, foi com este algoritmo que obtive o melhor resultado. Para validar os modelos e otimizar hiperparâmetros foi utilizada uma busca aleatória ([hyperopt](https://github.com/hyperopt/hyperopt)) com uma validação cruzada estratificada com 5 folds.
 
 A classificação final foi razoável (593rd/1388), dado o tempo que pude dedicar à competição. O resultado foi uma acurácia de 0.78570.
 
