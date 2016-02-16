@@ -28,6 +28,8 @@ Em razão de restrições de tempo, os modelos criados foram simples. Não utili
 
 Meu principal objetivo foi me familiarizar com o pacote [XGBoost](), um algoritmo bastante robusto e eficiente que vem mostrando resultados expressivos em competições de ciência de dados. De fato, foi com este algoritmo que obtive o melhor resultado. Para validar os modelos e otimizar hiperparâmetros foi utilizada uma busca aleatória ([hyperopt]()) com uma validação cruzada estratificada com 5 folds.
 
+A classificação final foi razoável (593rd/1388), dado o tempo que pude dedicar à competição. O resultado foi uma acurácia de 0.78570.
+
 ### Dados e variáveis
 
 Algumas curiosidades sobre o dataset (não processado):
@@ -39,51 +41,51 @@ Algumas curiosidades sobre o dataset (não processado):
 
 Top 20 ingredientes:
 
-salt 18049 
-olive oil 7972
-onions 7972
-water 7457
-garlic 7380
-sugar 6434
-garlic cloves 6237
-butter 4848
-ground black pepper 4785
-all-purpose flour 4632
-pepper 4438
-vegetable oil 4385
-eggs 3388
-soy sauce 3296
-kosher salt 3113
-green onions 3078
-tomatoes 3058
-large eggs 2948
-carrots 2814
-unsalted butter 2782
+salt 18049 <br>
+olive oil 7972 <br>
+onions 7972 <br>
+water 7457 <br>
+garlic 7380 <br>
+sugar 6434 <br>
+garlic cloves 6237 <br>
+butter 4848 <br>
+ground black pepper 4785 <br>
+all-purpose flour 4632 <br>
+pepper 4438 <br>
+vegetable oil 4385 <br>
+eggs 3388 <br>
+soy sauce 3296 <br>
+kosher salt 3113 <br>
+green onions 3078 <br>
+tomatoes 3058 <br>
+large eggs 2948 <br>
+carrots 2814 <br>
+unsalted butter 2782 
 
 Distribuição dos 250 ingredientes mais frequentes. Poucos ingredientes formam a base da maioria das culinárias!
 
-
+![](https://github.com/gdmarmerola/whats-cooking/blob/master/figs/ingred-freqs.png)
 
 #### Culinárias mais comuns
 
-italian         7838
-mexican         6438
-southern_us     4320
-indian          3003
-chinese         2673
-french          2646
-cajun_creole    1546
-thai            1539
-japanese        1423
-greek           1175
-spanish          989
-korean           830
-vietnamese       825
-moroccan         821
-british          804
-filipino         755
-irish            667
-jamaican         526
-russian          489
-brazilian        467
+italian         7838 <br>
+mexican         6438 <br>
+southern_us     4320 <br>
+indian          3003 <br>
+chinese         2673 <br>
+french          2646 <br>
+cajun_creole    1546 <br>
+thai            1539 <br>
+japanese        1423 <br>
+greek           1175 <br>
+spanish          989 <br>
+korean           830 <br>
+vietnamese       825 <br>
+moroccan         821 <br>
+british          804 <br>
+filipino         755 <br>
+irish            667 <br> 
+jamaican         526 <br>
+russian          489 <br>
+brazilian        467 <br>
 
